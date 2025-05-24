@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0%;
+            font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .navbar {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            /* background-color: aliceblue; */
+            font-family: sans-serif;
+            font-size: 12px;
+
+        }
+
+        .left-navbar img {
+            width: 108px;
+        }
+
+        .left-navbar {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            padding: 0px 55px;
+            padding-left: 65px;
+        }
+
+        .left-navbar a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .right-navbar {
+            /* background-color: rgb(242, 102, 102); */
+            width: 25%;
+            justify-content: space-evenly;
+
+        }
+
+        .right-navbar select {
+            border: none;
+        }
+
+        .right-navbar * {
+            padding: 5px;
+            gap: 15px;
+            justify-content: space-evenly;
+        }
+
+        .right-navbar .fa-user-plus {
+            border-style: solid;
+            border-radius: 26px;
+            border-width: 1px;
+        }
+
+        .first-block {
+            display: flex;
+            background-color: #e7f1fb;
+            padding: 10px;
+
+            justify-content: space-between;
+            font-family: sans-serif;
+
+        }
+
+        .first-block .left-content {
+            /* padding: 60px;
+            padding-left: 80px; */
+            padding: 60px 60px 60px 80px;
+            width: 40%;
+
+        }
+
+        .first-block .left-content h3 {
+            font-size: 45px;
+            margin: 0 0 10px 0;
+            max-width: 100%;
+            padding-left: 0%;
+        }
+
+
+
+
+        .first-block img {
+            width: 123%;
+            margin-left: -40%;
+
+
+
+        }
+
+        .first-block .left-content button {
+            background-color: rgb(41, 108, 255);
+            color: white;
+            padding: 15px;
+            font-size: 15px;
+            border: none;
+            margin-top: 5px;
+        }
+
+        .second-block {
+            justify-items: center;
+        }
+
+        .second-block * {
+            margin: 10px
+        }
+
+
+        .icons {
+            display: flex;
+            /* justify-content: space-around; */
+            justify-content: center;
+            text-align: center;
+            /* flex-wrap: wrap; */
+            margin: 0.5px;
+            gap: 20px;
+
+        }
+
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* width: 230px; */
+            width: auto;
+            gap: 1px;
+            text-decoration: solid;
+        }
+
+        .icon-item img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .icon-item a {
+
+            color: #1086e1;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        .third-block {
+            display: flex;
+            max-width: 200%;
+            /* background-color: #1686b4; */
+            font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 5% 3%;
+
+
+            justify-content: space-between;
+
+        }
+
+        .container {
+            margin: 1%;
+        }
+
+        .container img {
+            width: 100%;
+            margin: auto;
+            object-fit: cover;
+        }
+
+        .third-block .container {
+
+            width: 25%;
+
+            border-radius: 1px;
+            box-shadow: 0px 0px 9px rgb(159, 153, 153);
+            justify-content: space-between;
+            /* Ensure full height */
+
+            padding-bottom: 10px;
+        }
+
+        .third-block p,
+        h3 {
+            padding: 4%;
+            margin: 0%;
+        }
+
+        .third-block h3 {
+            font-size: 170%;
+            margin-bottom: 0px;
+        }
+
+        .container button {
+
+            margin: 5%;
+            padding: 10px;
+            color: white;
+            font-size: 90%;
+            border: none;
+            background-color: rgb(41, 108, 255);
+            align-items: baseline;
+            margin-top: auto
+        }
+
+        .fourth-block {
+            display: flex;
+            background-color: rgb(246, 244, 244);
+            margin: 4%;
+            width: fit-content;
+        }
+
+        .fourth-block img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            padding-bottom: 0%;
+        }
+
+        .fourth-block .fourth-left {
+            background-color: rgb(0, 0, 0);
+            padding: 100px;
+            color: white;
+            width: 35%;
+        }
+
+        .fourth-left h3 {
+            font-size: 38px;
+            padding-left: 0%;
+        }
+
+        .fourth-block button {
+            margin-top: 6px;
+            padding: 7px;
+            padding: 7px 0px;
+            font-size: 15px;
+            width: 19%;
+            background-color: rgb(41, 108, 255);
+            border: none;
+            color: white;
+        }
+
+        .last-block {
+            display: flex;
+            max-width: 200%;
+            /* background-color: #1686b4; */
+            font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            margin: 5% 3%;
+            justify-content: space-between;
+
+        }
+
+        .container1 {
+            margin: 1%;
+        }
+
+
+
+        .last-block .container1 {
+
+            width: 25%;
+            /* display: flex;
+            flex-direction: column; */
+            border-radius: 1px;
+            box-shadow: 0px 0px 9px rgb(159, 153, 153);
+            justify-content: space-between;
+            /* Ensure full height */
+
+            padding-bottom: 10px;
+        }
+
+        .container1 img {
+            width: 100%;
+            margin: auto;
+            object-fit: cover;
+        }
+
+        .last-block p,
+        h3 {
+            padding: 7%;
+            padding-bottom: 0%;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .last-block h3 {
+            font-size: 170%;
+            margin-bottom: 0px;
+        }
+
+        .last-block p {
+            padding-top: 0%;
+        }
+
+        .container1 button {
+
+            margin: 5%;
+            padding: 10px;
+            color: white;
+            font-size: 90%;
+            border: none;
+            background-color: rgb(41, 108, 255);
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* .container1 .but2
+        {
+            margin-top:111px;
+        }
+        .container1 .but3
+        {
+            margin-top:70px;
+        }
+        .container1 .but4
+        {
+            margin-top:97px;
+        } */
+        .container1 .but2,
+        .container1 .but3,
+        .container1 .but4 {
+            margin-top: auto;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .top-arrow button {
+            background-color: rgb(161, 161, 161);
+            border: none;
+           padding:10px;
+           align-items: flex-end;
+        }
+        @media (max-width:400px) {
+            
+            .first-block
+            {
+                flex-direction:column;
+                width: 100% !important;
+                margin-right:0%;
+                
+            }
+            .first-block .left-content
+            {
+                width:80%;
+                width: 100% !important;
+                padding-left: 20px;
+                padding-right:20px ;
+            }
+            .first-block img
+            {
+               width: 100% !important;
+                padding-left:90px;
+
+            }
+
+            .second-block
+            {
+                flex-direction:column;
+                
+            }
+            .icons
+            {
+                flex-direction: column;
+                 margin-left:90px;
+            }
+            .third-block 
+            {
+                flex-direction: column;
+                /* width:100% !important; */
+                padding:0%;
+            }
+            .third-block .container
+            {
+                width:100% !important;
+                margin-left:90px;
+            }
+            .fourth-block
+            {
+                flex-direction: column;
+            }
+            .fourth-block .fourth-left
+            {
+                width: 100% !important;
+            }
+            .fourth-block .fourth-right
+            {
+                width:161% !important;
+            }
+            .last-block
+            {
+                flex-direction: column;
+                /* width:100% !important; */
+                padding:0%;
+            }
+            .last-block .container1
+            {
+                width:100% !important;
+                margin-left:90px;
+            }
+        }
+        .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #f9f9f9;
+      border-top: 1px solid #ddd;
+    }
+
+    .social {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .social span {
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    .social a img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
+    .back-to-top {
+      background-color: #ddd;
+      padding: 10px 15px;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .back-to-top:hover {
+      background-color: #ccc;
+    }
+
+    .back-to-top .arrow {
+      display: inline-block;
+      transform: rotate(-45deg);
+      border: solid black;
+      border-width: 0 2px 2px 0;
+      padding: 3px;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="left-navbar">
+            <img src="https://uhf.microsoft.com/images/microsoft/RE1Mu3b.png" alt="">
+            <a href="">Microsoft 365</a>
+            <a href="">Teams</a>
+            <a href="">Copilot</a>
+            <a href=""> Windows</a>
+            <a href="">More</a>
+
+        </div>
+        <div class="right-navbar">
+
+            <select name="" id="">
+                <option>All Microsoft</option>
+                <option>Software</option>
+                <option>PCs & Devices</option>
+                <option>Entertainment</option>
+                <option>Bussiness</option>
+                <option>Developer & IT</option>
+                <option>Other</option>
+            </select>
+            Search<i class="fa-solid fa-magnifying-glass"></i>
+            Cart<i class="fa-solid fa-cart-shopping"></i>
+            Sign in<i class="fa-solid fa-user-plus"></i>
+        </div>
+
+    </div>
+    <div class="first-block">
+        <div class="left-content">
+            <h3>Meet Surface Laptop</h3>
+            <p>Unlock AI features like Live Captions and Cocreator with this exceptionally powerful laptop</p>
+            <button>Learn more</button>
+        </div>
+        <div class="right-content">
+            <img src="./laptop.png" alt="" width="">
+            <!-- <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Laptop-AI-7Ed-Sapphire-MC001-3000x1682:VP2-859x540" alt=""> -->
+        </div>
+    </div>
+    <div class="second-block">
+        <div>
+            <i class="fa-regular fa-circle-play"></i>
+           <i class="fa-solid fa-less-than"></i>
+            <i class="fa-solid fa-circle"></i>
+            <i class="fa-regular fa-circle"></i>
+           <i class="fa-solid fa-greater-than"></i>
+        </div>
+
+
+
+        <div class="icons">
+            <div class="icon-item">
+                <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Microsoft-365?wid=40&hei=40"
+                    alt="">
+                <a href="">Choose your Microsoft 365</a>
+            </div>
+            <div class="icon-item">
+                <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Xbox-Games-Consoles?wid=40&hei=40"
+                    alt="">
+                <a href="">Shop Xbox</a>
+            </div>
+            <div class="icon-item">
+                <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Microsoft-365?wid=40&hei=40"
+                    alt="">
+                <a href="">Get Windows 11</a>
+            </div>
+            <div class="icon-item">
+                <img src="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Link-List-Icons-Surface-Devices?wid=40&hei=40"
+                    alt="">
+                <a href="">Explore Surface devices</a>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="third-block">
+        <div class="container">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-M365-Icons-Teams?wid=406&hei=230&fit=crop"
+                alt="">
+            <h3>Achieve the extraordinary</h3>
+            <p>With Microsoft 365, get spacious cloud storage, advanced security for your data and devices and powerful
+                productivity and creativity apps with AI,1 all in one plan.</p>
+            <button>Shop Microsoft 365</button>
+        </div>
+        <div class="container">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Copilot-Native-App-ROW?wid=406&hei=230&fit=crop"
+                alt="">
+            <h3>Copilot is your AI companion</h3>
+            <p>Always by your side, ready to support you whenever and wherever you need it.</p>
+            <button>Download the Copilot app</button>
+        </div>
+        <div class="container">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-XSS-CP-Xbox-Series-S-Evergreen?wid=406&hei=230&fit=crop"
+                alt="">
+            <h3>Xbox Series S</h3>
+            <p>Next-gen performance in the smallest Xbox ever.</p>
+            <button class="one">Shop Xbox Series S</button>
+        </div>
+        <div class="container">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-XSX-CP-Xbox-Series-X?wid=406&hei=230&fit=crop"
+                alt="">
+            <h3>Xbox Series X</h3>
+            <p>The fastest, most powerful Xbox ever.</p>
+            <button>Shop Xbox Series X</button>
+        </div>
+    </div>
+    <div class="fourth-block">
+        <div class="fourth-left">
+            <h3>Game Pass</h3>
+            <p>Play new games on day one. Plus, enjoy hundreds of high-quality games with friends on console and PC.</p>
+            <button>Join now</button>
+        </div>
+        <div class="fourth-right">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Game-Pass-Update-September-2024:VP2-859x540"
+                alt="">
+        </div>
+    </div>
+    <div class="last-block">
+
+        <div class="container1">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Surface-Pro-AI-11Ed-Platinum-x86-001-COMMR?wid=406&hei=230&fit=crop"
+                alt="">
+            <h3>Surface Pro for Business, Copilot+ PC | Intel</h3>
+            <p>AI-powered and built for business, Surface Pro combines versatility with the power of Intel® Core™ Ultra
+                processor (Series 2) to boost AI experiences and productivity in a sleek design teams love.</p>
+            <button class="but1">Learn more</button>
+        </div>
+        <div class="container1">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Copilot-Commercial?wid=406&hei=230&fit=crop"
+                alt="">
+            <h3>Microsoft 365 Copilot</h3>
+            <p>Save time and focus on the things that matter most with AI in Microsoft 365 for business.</p>
+            <button class="but2">Learn more</button>
+        </div>
+        <div class="container1">
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Microsoft-Teams-Commercial-Meeting?wid=406&hei=230&fit=crop"
+                alt="">
+            <h3>Get Microsoft Teams for your business</h3>
+            <p>Online meetings, chat, real-time collaboration, and shared cloud storage – all in one place.</p>
+            <button class="but3">Find the right plan for your business</button>
+        </div>
+        <div class="container1">
+
+            <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Windows-11-Business?wid=406&hei=230&fit=crop"
+                alt="">
+            <h3>Windows 11 for business</h3>
+            <p>Designed for hybrid work. Powerful for employees. Consistent for IT. Secure for all.</p>
+            <div><button class="but4">Learn more</button></div>
+            
+        </div>
+    </div>
+    
+    <footer class="footer">
+    <div class="social">
+      <span>Follow Microsoft</span>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="X"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+    </div>
+
+    <a href="#" class="back-to-top">
+      <span class="arrow"></span>
+      Back to top
+    </a>
+  </footer>
+</body>
+
+</html>
